@@ -1,0 +1,23 @@
+.worktrees/
+
+# Flutter 和 Dart 生成文件
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+release/
+
+# 编辑器和本机文件
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Android 构建文件
+android/.gradle/
+android/.kotlin/
+android/app/debug
+android/app/profile
+android/app/release
