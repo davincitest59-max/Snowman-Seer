@@ -101,6 +101,17 @@ void main() {
     expect(find.byType(TextField), findsOneWidget);
   });
 
+  testWidgets('心情弹框输入框不显示下划线', (tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: Scaffold(body: MoodPromptDialog())),
+    );
+
+    final textField = tester.widget<TextField>(find.byType(TextField));
+    expect(textField.decoration?.border, InputBorder.none);
+    expect(textField.decoration?.enabledBorder, InputBorder.none);
+    expect(textField.decoration?.focusedBorder, InputBorder.none);
+  });
+
   testWidgets('心情弹框选择心情后点击确定才返回结果', (tester) async {
     MoodPromptResult? result;
 

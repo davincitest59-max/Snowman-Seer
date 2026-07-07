@@ -71,6 +71,9 @@ class _MoodPromptDialogState extends State<MoodPromptDialog> {
             decoration: const InputDecoration(
               labelText: '心情原因',
               hintText: '写下今天心情的原因',
+              border: InputBorder.none,
+              enabledBorder: InputBorder.none,
+              focusedBorder: InputBorder.none,
             ),
             maxLines: 2,
           ),
