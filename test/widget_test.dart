@@ -23,6 +23,18 @@ void main() {
     expect(confirmButton.onPressed, isNull);
   });
 
+  testWidgets('心情选择弹框内容上下居中', (tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: Scaffold(body: MoodPromptDialog())),
+    );
+
+    final contentColumn = tester.widget<Column>(
+      find.byKey(const ValueKey('mood-prompt-centered-content')),
+    );
+    expect(contentColumn.mainAxisAlignment, MainAxisAlignment.center);
+    expect(contentColumn.crossAxisAlignment, CrossAxisAlignment.center);
+  });
+
   testWidgets('页面大标题旁显示今日心情颜色小圆点和心情文字', (tester) async {
     var tapped = false;
     await tester.pumpWidget(

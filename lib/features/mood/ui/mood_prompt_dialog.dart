@@ -33,7 +33,10 @@ class _MoodPromptDialogState extends State<MoodPromptDialog> {
     return AlertDialog(
       title: const Text('选择今日心情'),
       content: Column(
+        key: const ValueKey('mood-prompt-centered-content'),
         mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Wrap(
             spacing: 12,
